@@ -31,7 +31,7 @@ au Filetype cpp set keywordprg=man
 "au Filetype cpp set keywordprg=cppman
 
 noremap Y y$
-" Enabled backspace as esacpe for every mode accept insert mode.
+" Enabled backspace as escape for every mode accept insert mode.
 :map <BS> <ESC>
 map cc c^
 
