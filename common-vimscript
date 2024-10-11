@@ -88,7 +88,7 @@ vnoremap <silent> <SPACE>< :call WrapWith("<", ">")<CR>
 vnoremap <silent> <SPACE>" :call WrapWith("\"", "\"")<CR>
 vnoremap <silent> <SPACE>' :call WrapWith("\'", "\'")<CR>
 
-" Swap motions
+" Swap motions (Can comment out to allow individual files to specify this)
 noremap j g<DOWN>
 noremap k g<UP>
 noremap gj <DOWN>
