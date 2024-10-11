@@ -1,0 +1,95 @@
+
+set number
+set relativenumber
+set hlsearch
+set scrolloff=10
+set showmatch
+set history=50
+
+set smarttab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=0
+set expandtab
+set smartindent
+set hidden " Allow to replace the current buffer in the window even if that buffer is modified.
+
+setlocal spell spelllang=en
+
+set ruler               " show the cursor position all the time
+set showcmd	            " display incomplete commands
+set wildmenu            " display completion matches in a status line
+set matchpairs+=<:>     " When hovering over < or > can use % to jump between them like ()
+
+" Set the screen line break display character
+set showbreak=>\ 
+
+" Setup help pages
+au Filetype python set keywordprg=pydoc3
+au Filetype c set keywordprg=bash
+au Filetype cpp set keywordprg=man
+"au Filetype cpp set keywordprg=cppman
+
+noremap Y y$
+" Enabled backspace as esacpe for every mode accept insert mode.
+:map <BS> <ESC>
+map cc c^
+
+map <SPACE>x :%!xxd<CR>
+map <SPACE>X :%!xxd -r<CR>
+" Search for text within the last visually selected region.
+"   uses /\%V ... \%V  to match only within the last visually selected text.
+vmap <SPACE>vs <ESC>/\V\%V\<\>\%V/<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+vmap <SPACE>vS <ESC>/\V\%V\%V/<LEFT><LEFT><LEFT><LEFT>
+nmap <SPACE>vs /\V\%V\<\>\%V/<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+nmap <SPACE>vS /\V\%V\%V/<LEFT><LEFT><LEFT><LEFT>
+map <SPACE>vr <ESC>:%s/\V\%V\<\>\%V//<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+map <SPACE>vR <ESC>:%s/\V\%V\%V//<LEFT><LEFT><LEFT><LEFT><LEFT>
+
+nmap <SPACE>es :setlocal spelllang=en_gb<CR>
+nmap <SPACE>eS :setlocal spelllang=<CR>
+
+" Language specific bindings
+"   Python
+au FileType python nmap <SPACE>r :!python3 %<CR>
+"     Filter file through python interpreter
+au FileType python nmap <SPACE>ff :%!python3<CR>
+au FileType python nmap <SPACE>fl :.!python3<CR>
+au FileType python nmap <SPACE>fc : !python3<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+
+
+" Search for visually selected text
+"vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+" Search for selected text, forwards or backwards.
+"  To toggle litteral spaces g:VeryLiteral use:  \vl (assumes \ is leader key (default))
+vnoremap <silent> <Space>hs :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> <Space>hS :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
+
+function! WrapWith(startChar, endChar) range
+    let l:beg = getpos("'<")
+    let l:end = getpos("'>")
+    execute "normal! `>a".a:endChar
+    execute "normal! `<i".a:startChar
+endfunction
+
+" Wrappers
+vnoremap <silent> <SPACE>( :call WrapWith("(", ")")<CR>
+vnoremap <silent> <SPACE>[ :call WrapWith("[", "]")<CR>
+vnoremap <silent> <SPACE>{ :call WrapWith("{", "}")<CR>
+vnoremap <silent> <SPACE>< :call WrapWith("<", ">")<CR>
+vnoremap <silent> <SPACE>" :call WrapWith("\"", "\"")<CR>
+vnoremap <silent> <SPACE>' :call WrapWith("\'", "\'")<CR>
+
+" Swap motions
+noremap j g<DOWN>
+noremap k g<UP>
+noremap gj <DOWN>
+noremap gk <UP>

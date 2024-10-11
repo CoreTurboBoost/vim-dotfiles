@@ -1,0 +1,12 @@
+
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+source ~/.config/vim/common-vimscript
+
+set spelllang=en
+
+" Keybindings / Mappings
+noremap j g<DOWN>
+noremap k g<UP>
+noremap gj <DOWN>
+noremap gk <UP>

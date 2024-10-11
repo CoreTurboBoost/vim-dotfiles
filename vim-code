@@ -1,0 +1,53 @@
+
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+source ~/.config/vim/common-vimscript
+
+" Disable spell checking
+"setlocal spell spelllang=
+" Disable language specific indent and plugins.
+"filetype plugin indent off
+au FileType c,cpp,java set matchpairs+==:;
+
+" plugins
+"  FZF: https://github.com/junegunn/fzf
+"  LSP: https://github.com/prabirshrestha/vim-lsp
+"  LSP-SETTINGS: https://github.com/mattn/vim-lsp-settings
+
+call plug#begin()
+Plug 'junegunn/fzf'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+call plug#end()
+
+" Autocomplete with lsp
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+endfunction
+
+" Only run if lsp is available
+augroup lsp_install
+    au!
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+nmap <SPACE>f :FZF --color=16 --multi<CR>
+nmap <SPACE>gd :LspDeclaration<CR>
+nmap <SPACE>d :LspDefinition<CR>
+nmap <SPACE>D :LspDocumentDiagnostics --buffers=*<CR>
+nmap <SPACE>i :LspImplementation<CR>
+nmap <SPACE>r :LspRename<CR>
+nmap <SPACE>R :LspReferences<CR>
+" Can swap between next error or next diagnostic
+"nmap <SPACE>e :LspNextError<CR>
+"nmap <SPACE>E :LspPreviousError<CR>
+nmap <SPACE>e :LspNextDiagnostic<CR>
+nmap <SPACE>E :LspPreviousDiagnostic<CR>
+nmap <SPACE>pi :LspPeekImplementation<CR>
+nmap <SPACE>pd :LspPeekDeclaration<CR>
+nmap <SPACE>pD :LspPeekDefinition<CR>
+nmap <SPACE>s :LspDocumentSymbol<CR>
+nmap <SPACE>S :LspDocumentSymbolSearch<CR>
+nmap <SPACE>o :LspDocumentFold<CR>
+nmap <SPACE>F :LspDocumentFormat<CR>
+
