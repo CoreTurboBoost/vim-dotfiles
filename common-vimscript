@@ -46,8 +46,8 @@ nmap <SPACE>vS /\V\%V\%V/<LEFT><LEFT><LEFT><LEFT>
 map <SPACE>vr <ESC>:%s/\V\%V\<\>\%V//<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 map <SPACE>vR <ESC>:%s/\V\%V\%V//<LEFT><LEFT><LEFT><LEFT><LEFT>
 
-nmap <SPACE>es :setlocal spelllang=en_gb<CR>
-nmap <SPACE>eS :setlocal spelllang=<CR>
+" Toggle the spell checker (enable and disable)
+nnoremap <SPACE>es :set spell!<CR>
 
 " Language specific bindings
 "   Python
