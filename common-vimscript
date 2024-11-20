@@ -61,7 +61,7 @@ au FileType python nmap <SPACE>fc : !python3<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 " Search for visually selected text
 "vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 " Search for selected text, forwards or backwards.
-"  To toggle litteral spaces g:VeryLiteral use:  \vl (assumes \ is leader key (default))
+"  To toggle literal spaces g:VeryLiteral use:  \vl (assumes \ is leader key (default))
 vnoremap <silent> <Space>hs :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
   \gvy/<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
