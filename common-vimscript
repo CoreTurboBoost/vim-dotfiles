@@ -14,7 +14,7 @@ set expandtab
 set smartindent
 set hidden " Allow to replace the current buffer in the window even if that buffer is modified.
 
-setlocal spell spelllang=en
+set spell spelllang=en  " Set the spell checker language, editor wide
 
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
