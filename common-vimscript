@@ -47,7 +47,7 @@ map <SPACE>vr <ESC>:%s/\V\%V\<\>\%V//<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 map <SPACE>vR <ESC>:%s/\V\%V\%V//<LEFT><LEFT><LEFT><LEFT><LEFT>
 
 " Toggle the spell checker (enable and disable)
-nnoremap <SPACE>es :set spell!<CR>
+nnoremap <SPACE>es :set spell!<CR>:set spell?<CR>
 
 " Language specific bindings
 "   Python
