@@ -30,6 +30,7 @@ au Filetype c set keywordprg=bash
 au Filetype cpp set keywordprg=man
 "au Filetype cpp set keywordprg=cppman
 
+" Vanilla vim remapping
 noremap Y y$
 " Enabled backspace as escape for every mode accept insert mode.
 :map <BS> <ESC>
