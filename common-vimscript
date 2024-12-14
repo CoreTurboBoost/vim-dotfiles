@@ -35,6 +35,9 @@ noremap Y y$
 :map <BS> <ESC>
 map cc c^
 
+" Open the file manager
+noremap <SPACE>f :Explore<CR>
+noremap <SPACE>F :Explore 
 map <SPACE>x :%!xxd<CR>
 map <SPACE>X :%!xxd -r<CR>
 " Search for text within the last visually selected region.
