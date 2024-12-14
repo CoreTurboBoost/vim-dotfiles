@@ -38,8 +38,11 @@ map cc c^
 " Open the file manager
 noremap <SPACE>f :Explore<CR>
 noremap <SPACE>F :Explore 
+
+" Convert between hex representations
 map <SPACE>x :%!xxd<CR>
 map <SPACE>X :%!xxd -r<CR>
+
 " Search for text within the last visually selected region.
 "   uses /\%V ... \%V  to match only within the last visually selected text.
 vmap <SPACE>vs <ESC>/\V\%V\<\>\%V/<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
