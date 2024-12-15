@@ -32,8 +32,10 @@ au Filetype cpp set keywordprg=man
 
 " Vanilla vim remapping
 noremap Y y$
-map <BS> <ESC>    " Change Backspace key to the Escape key (for all modes accept insert).
 map cc c^
+
+" Change Backspace key to the Escape key (for all modes accept insert).
+map <BS> <ESC>
 
 " Open the file manager
 nmap <SPACE>f :Explore<CR>
