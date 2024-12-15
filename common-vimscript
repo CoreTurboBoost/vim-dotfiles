@@ -36,8 +36,8 @@ map <BS> <ESC>    " Change Backspace key to the Escape key (for all modes accept
 map cc c^
 
 " Open the file manager
-noremap <SPACE>f :Explore<CR>
-noremap <SPACE>F :Explore 
+nmap <SPACE>f :Explore<CR>
+nmap <SPACE>F :Explore 
 
 " Convert between hex representations
 map <SPACE>x :%!xxd<CR>
