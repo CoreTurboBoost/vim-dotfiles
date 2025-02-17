@@ -102,3 +102,7 @@ noremap j g<DOWN>
 noremap k g<UP>
 noremap gj <DOWN>
 noremap gk <UP>
+
+" Load some plugins
+"  Enable the man page plugin
+:runtime! ftplugin/man.vim
