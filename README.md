@@ -1,8 +1,13 @@
 # Vim configuration files
 
+## Assumptions
+
+ - These configuration files are intended to be used only on Unix like operating system, such as Linux.
+ - Theses configuration files have only been tested on Debian Linux. Therefore they may not work on other operating systems.
+
 ## File placement
 
-Move the files in `vim-config` to your local configuration directory (`~/.config/vim/` on Unix systems).
+Move the files in `vim-config` to your local configuration directory (`~/.config/vim/`).
 Move the files in `vim-runtime` to your local vim runtime directory (`~/.vim/`).
 Move `vimrc` to your home directory (`~/`) and name it `.vimrc`, resulting in a file `~/.vimrc`. This is the default vim configuration (Make sure to backup an existing `~/.vimrc` if it already exists).
 
