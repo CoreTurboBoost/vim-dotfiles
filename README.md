@@ -9,7 +9,7 @@
 
 Move the files in `vim-config` to your local configuration directory (`~/.config/vim/`).
 Move the files in `vim-runtime` to your local vim runtime directory (`~/.vim/`).
-Move `vimrc` to your home directory (`~/`) and name it `.vimrc`, resulting in a file `~/.vimrc`. This is the default vim configuration (Make sure to backup an existing `~/.vimrc` if it already exists).
+You may move `vimrc` to your home directory (`~/`) and name it `.vimrc`, resulting in the file `~/.vimrc`. This would be the default vim configuration (Make sure to backup an existing `~/.vimrc` if it already exists).
 
 ## Making aliases
 
