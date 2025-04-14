@@ -20,5 +20,9 @@ Then make an alias to `~/.config/vim/vim-code` for the code editor and `~/.confi
 
 ## Opening the text editor
 
-- To open the code editor run the `vimc` command. Just after opening the editor run `:PlugInstall` to install the new plug-ins.
+- To open the code editor run the `vimc` command.
 - To open the text editor run the `vimt` command.
+
+## First startup instructions for the code editor
+ 1. Go to [](https://github.com/junegunn/vim-plug) and follow the installation instructions to install the plugin manager.
+ 2. Then open the code editor with the `vimc` command and run the vim command `:PlugInstall` to install all the required plugins.
