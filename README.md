@@ -20,5 +20,5 @@ Then make an alias to `~/.config/vim/vim-code` for the code editor and `~/.confi
 
 ## Opening the text editor
 
-To open the code editor run the `vimc` command.
-To open the text editor run the `vimt` command.
+- To open the code editor run the `vimc` command. Just after opening the editor run `:PlugInstall` to install the new plug-ins.
+- To open the text editor run the `vimt` command.
