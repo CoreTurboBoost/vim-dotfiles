@@ -22,6 +22,9 @@ set showcmd             " display incomplete commands
 set wildmenu            " display completion matches in a status line
 set matchpairs+=<:>     " When hovering over < or > can use % to jump between them like ()
 
+" Set the colorscheme to monokai on editor startup. Remove the following line to return the colorscheme back to default
+colorscheme monokai
+
 " Set the screen line break display character
 set showbreak=>\ 
 
