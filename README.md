@@ -15,13 +15,13 @@ You may move `vimrc` to your home directory (`~/`) and name it `.vimrc`, resulti
 
 Then make an alias to `~/.config/vim/vim-code` for the code editor and `~/.config/vim/vim-text` for the text editor. The aliases should be in your `~/.bashrc`.
 
-- alias vimc="vim -u ~/.config/vim/vim-code"
-- alias vimt="vim -u ~/.config/vim/vim-text"
+ - alias vimc="vim -u ~/.config/vim/vim-code"
+ - alias vimt="vim -u ~/.config/vim/vim-text"
 
 ## Opening the text editor
 
-- To open the code editor run the `vimc` command.
-- To open the text editor run the `vimt` command.
+ - To open the code editor run the `vimc` command.
+ - To open the text editor run the `vimt` command.
 
 ## First startup instructions for the code editor
  1. Go to [](https://github.com/junegunn/vim-plug) and follow the installation instructions to install the plugin manager.
