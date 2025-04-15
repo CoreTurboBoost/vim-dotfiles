@@ -22,6 +22,8 @@ set showcmd             " display incomplete commands
 set wildmenu            " display completion matches in a status line
 set matchpairs+=<:>     " When hovering over < or > can use % to jump between them like ()
 
+set bg=dark             " Ask vim to use nicer colours for a dark theme
+
 " Set the colorscheme to monokai on editor startup. Remove the following line to return the colorscheme back to default
 colorscheme monokai
 
