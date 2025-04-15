@@ -59,3 +59,5 @@ nmap <SPACE>S :LspDocumentSymbolSearch<CR>
 nmap <SPACE>o :LspDocumentFold<CR>
 nmap <SPACE>F :LspDocumentFormat<CR>
 
+" Add extra local vim plugins
+packadd termdebug          " Add gdb debug support to vim. See ':h Termdebug' for more info
