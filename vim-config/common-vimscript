@@ -38,7 +38,7 @@ au Filetype cpp set keywordprg=man
 
 " Vanilla vim remapping
 noremap Y y$
-map cc c^
+nnoremap cc c^
 
 " Change Backspace key to the Escape key (for all modes accept insert).
 map <BS> <ESC>
