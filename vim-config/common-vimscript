@@ -103,6 +103,19 @@ vnoremap <silent> <SPACE>" :call WrapWith("\"", "\"")<CR>
 vnoremap <silent> <SPACE>' :call WrapWith("\'", "\'")<CR>
 vnoremap <silent> <SPACE>` :call WrapWith("\`", "\`")<CR>
 
+au Filetype html vnoremap <silent> <SPACE>th :call WrapWith("<header>", "</header>")<CR>
+au Filetype html vnoremap <silent> <SPACE>tH :call WrapWith("<html>", "</html>")<CR>
+au Filetype html vnoremap <silent> <SPACE>ta :call WrapWith("<a>", "</a>")<CR>
+au Filetype html vnoremap <silent> <SPACE>tr :call WrapWith("<href>", "</href>")<CR>
+au Filetype html vnoremap <silent> <SPACE>tp :call WrapWith("<p>", "</p>")<CR>
+au Filetype html vnoremap <silent> <SPACE>tb :call WrapWith("<strong>", "</strong>")<CR>
+au Filetype html vnoremap <silent> <SPACE>ti :call WrapWith("<em>", "</em>")<CR>
+au Filetype html vnoremap <silent> <SPACE>tt :call WrapWith("<title>", "</title>")<CR>
+au Filetype html vnoremap <silent> <SPACE>ts :call WrapWith("<section>", "</section>")<CR>
+au Filetype html vnoremap <silent> <SPACE>tS :call WrapWith("<script>", "</script>")<CR>
+au Filetype html vnoremap <silent> <SPACE>td :call WrapWith("<div>", "</div>")<CR>
+au Filetype html vnoremap <silent> <SPACE>tf :call WrapWith("<figure>", "</figure>")<CR>
+
 " Swap motions (Can comment out to allow individual files to specify this)
 noremap j g<DOWN>
 noremap k g<UP>
