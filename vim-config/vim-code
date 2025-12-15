@@ -19,9 +19,6 @@ au FileType c,cpp,java set matchpairs+==:;
 "endif
 
 " plugins
-"  FZF: https://github.com/junegunn/fzf
-"  LSP: https://github.com/prabirshrestha/vim-lsp
-"  LSP-SETTINGS: https://github.com/mattn/vim-lsp-settings
 call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'prabirshrestha/vim-lsp'
