@@ -24,6 +24,9 @@ Plug 'junegunn/fzf'
 "Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 " Autocomplete with lsp
