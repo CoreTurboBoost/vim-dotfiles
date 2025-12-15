@@ -35,6 +35,7 @@ au Filetype python set keywordprg=pydoc3
 au Filetype c set keywordprg=man
 au Filetype cpp set keywordprg=man
 "au Filetype cpp set keywordprg=cppman
+au Filetype bash set keywordprg=help
 
 " Vanilla vim remapping
 noremap Y y$
