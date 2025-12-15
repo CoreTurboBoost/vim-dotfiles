@@ -32,7 +32,7 @@ set showbreak=>\
 
 " Setup help pages
 au Filetype python set keywordprg=pydoc3
-au Filetype c set keywordprg=bash
+au Filetype c set keywordprg=man
 au Filetype cpp set keywordprg=man
 "au Filetype cpp set keywordprg=cppman
 
